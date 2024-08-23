@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-type" content="text/html; charset=utf-8"/>
+	<title>Query Page</title>
+	<link href="/query/query.css" rel="stylesheet"/>
+</head>
+<body>
+<div class="header">
+	<div class="header-text">
+		<b style="font-size: 40px"> Perform Query Page </b>
+		<a id="error-text" class="error-text"></a>
+	</div>
+	<div class="row-number-selector">
+		<label>Rows per page:</label>
+		<select id="max-rows-dropdown">
+			<option value=5> 5</option>
+			<option value=10> 10</option>
+			<option value=20 selected> 20</option>
+			<option value=50> 50</option>
+			<option value=100> 100</option>
+			<option value="all"> All</option>
+		</select>
+	</div>
+</div>
+<div class="content">
+	<div class="query-area">
+		<form id="query-form">
+			<textarea name="Query Text" id="query-text" class="query-text-area"></textarea>
+			<input type="submit" id="query" class="query" value="Query!" onsubmit="">
+		</form>
+	</div>
+
+	<div class="results">
+		<table id="results-table" class="results-table">
+		</table>
+
+		<div id="page-selector" class="page-selector">
+
+		</div>
+
+		<div id="page-text-input" class="page-text-input">
+			<input type="text" id="page-input-field" class="page-input-field">
+			<button onclick="updatePage()">Go to page</button>
+		</div>
+	</div>
+</div>
+
+<script type="text/javascript" src="/query/query.js"></script>
+</body>
+</html>

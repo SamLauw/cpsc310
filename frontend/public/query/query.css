@@ -1,0 +1,95 @@
+.content {
+	display: flex;
+	flex-direction: row;
+}
+
+.query-area {
+
+}
+
+.query-text-area {
+	width: 50vh;
+	height: 80vh;
+	font-size: 16px;
+}
+
+.query {
+	display: block;
+}
+
+.results {
+	min-width: 50vh;
+	padding-left: 5px;
+	display: flex;
+	flex-direction: column;
+}
+
+.results-table {
+	border-collapse: collapse;
+	table-layout: auto;
+	width: 100%;
+}
+
+.results-header {
+	border: black solid 1px;
+	min-width: max-content;
+	padding: 5px;
+}
+
+.results-cell {
+	border: black solid 1px;
+	padding: 5px;
+}
+
+.table-row {
+	height: 50px;
+}
+
+.error {
+	border: 1px solid #f00;
+}
+
+.header {
+	display: flex;
+}
+
+.header-text {
+	flex: 1;
+}
+
+.row-number-selector {
+	align-self: flex-end;
+}
+
+.error-text {
+	color: darkred;
+	width: max-content;
+	font-size: 20px;
+	padding: 5px;
+	display: none;
+	font-weight: bold;
+}
+
+.page-selector {
+	display: flex;
+	justify-content: center;
+}
+
+.page-selector-button {
+	font-size: 20px;
+	width: 40px;
+	height: 40px;
+}
+
+.selected-page-button {
+	background-color: lightgray;
+}
+
+.page-text-input {
+	align-self: center;
+	display: none;
+}
+
+.page-input-field {
+	width: 25px;
+}

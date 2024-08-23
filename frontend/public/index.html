@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-type" content="text/html; charset=utf-8"/>
+		<title>Welcome to CPSC 310 Team 211</title>
+		<link href="/style.css" rel="stylesheet" />
+	</head>
+	<body>
+		<nav class = "navbar">
+			<div class = "navbar_container">
+				<a href = "/index.html" id = "welcome">Welcome to CPSC 310 Team 211</a>
+			</div>
+		</nav>
+		<button class="addData" type="addData" onclick="addDataPop()">Add New Dataset</button>
+		<div class = "container" id="upload">
+			<form action="#">
+					<div class ="data">
+						<input type="text" id="id" placeholder="Input your dataset name" required> </in>
+					</div>
+					<div class="label">
+						<label> Select datasets kind: </label>
+					</div>
+					<div class="label">
+						<select id="kind_dropdown">
+							<option value = "sections"> Sections </option>
+							<option value = "rooms"> Rooms </option>
+						</select>
+					</div>
+					<div class="upload_button">
+						<input type="file" id="inputFile" name="filename" accept=".zip">
+					</div>
+					<div class="upload_button">
+						<input type="submit" id="submit" accept="zip" onclick="closeAddData()">
+					</div>
+			</form>
+		</div>
+
+		<div class="datasets-container">
+			<button class="refresh" onclick="refreshDatasets()"><img src="refresh.png"></button>
+			<div id="datasets">
+			</div>
+		</div>
+		<div class ="confirm" id="successMessage">
+			<div>
+				<img src="tick.png">
+			</div>
+			<div>
+				<label class="message">Successfully added the dataset</label>
+			</div>
+			<div>
+				<button class="closeMessage" onclick="closeConfirmWindow()">OK</button>
+			</div>
+		</div>
+		<div class ="error" id="errorMessage">
+			<div>
+				<img src="cross.png">
+			</div>
+			<div>
+				<label class="message">Failed to add the dataset</label>
+			</div>
+			<div>
+				<button class="closeMessage" onclick="closeErrorWindow()">OK</button>
+			</div>
+		</div>
+		<script type="text/javascript" src="/frontend.js"></script>
+	</body>
+</html>
